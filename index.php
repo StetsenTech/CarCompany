@@ -9,14 +9,20 @@
     </head>
     <body>
         <?php
-            $vehicle1 = new Vehicle();
-            $vehicle2 = new Motorcycle();
+        
+            use Company\Vehicles\Car;
+            use Company\Vehicles\Truck;
+            use Company\Vehicles\Motorcycle;
+            
+            $sports = new Car();
+            $sedan = Car::vehicleProperties(4,4);
+            $harvey = new Motorcycle();
+            $pickup = Truck::changeWheels(16);
 
-            $vehicle1->setDoors(10);
-            echo $vehicle1->getDoors();
-            echo '<br />';
-            echo $vehicle2;
-
+            echo $sports;
+            echo $sedan;
+            echo $harvey;
+            echo $pickup;
         ?>
     </body>
 </html>
