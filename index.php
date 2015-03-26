@@ -10,19 +10,25 @@
     <body>
         <?php
         
-            use Company\Vehicles\Car;
-            use Company\Vehicles\Truck;
-            use Company\Vehicles\Motorcycle;
+            use Company\Vehicles\Cars\Car;
+            use Company\Vehicles\Truck\Truck;
+            use Company\Vehicles\Motorcycle\Motorcycle;
+            use Company\Vehicles\Cars\Sedan;
+            use Company\Vehicles\Cars\HatchbackCar;
             
             $sports = new Car();
-            $sedan = Car::vehicleProperties(4,4);
+            $sedan = new Sedan();
+            $concept = Car::vehicleProperties(0,3);
             $harvey = new Motorcycle();
             $pickup = Truck::changeWheels(16);
+            $hatch = new HatchbackCar();
 
             echo $sports;
             echo $sedan;
             echo $harvey;
             echo $pickup;
+            echo $concept; 
+            echo $hatch;
         ?>
     </body>
 </html>
